@@ -43,7 +43,7 @@ export default function Layout() {
             </main>
 
             <footer className={styles.footer}>
-                <p>IdeaForge · AI-powered startup validation · Built with Claude + OpenAI</p>
+                <p>IdeaForge · AI-powered startup validation · Integrated with Google Gemini</p>
             </footer>
         </div>
     );
