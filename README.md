@@ -188,7 +188,7 @@ npx vercel --prod
 
 | Category | Implementation |
 |---|---|
-| AI Report Quality | Structured 8-field JSON via GPT-3.5-turbo with validation + fallbacks |
+| AI Report Quality | Structured 8-field JSON via Gemini 3 Flash Preview with validation + fallbacks |
 | API Functionality | All 4 endpoints (POST, GET list, GET by ID, DELETE) |
 | Frontend UI/UX | Dark editorial design, animated, responsive, CSS Modules |
 | Database | MongoDB Atlas + Mongoose with full schema validation |
