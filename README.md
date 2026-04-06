@@ -2,7 +2,7 @@
 
 > **Schmooze Media — Technical Screening Assignment**
 
-A full-stack MVP that lets users submit startup ideas and receive instant AI-generated validation reports powered by OpenAI GPT-3.5-turbo.
+A full-stack MVP that lets users submit startup ideas and receive instant AI-generated validation reports powered by Google Gemini 3 Flash Preview.
 
 ---
 
@@ -20,7 +20,7 @@ A full-stack MVP that lets users submit startup ideas and receive instant AI-gen
 | Frontend  | React 18 + Vite, React Router v6, CSS Modules |
 | Backend   | Node.js, Express.js                 |
 | Database  | MongoDB + Mongoose (Atlas)          |
-| AI        | OpenAI GPT-3.5-turbo                |
+| AI        | Google Gemini 3 Flash Preview       |
 | Deployment| Vercel (frontend) · Render (backend)|
 
 ---
@@ -56,7 +56,7 @@ startup-validator/
 │   │   ├── routes/
 │   │   │   └── ideas.js             # Express router
 │   │   ├── services/
-│   │   │   └── openaiService.js     # GPT-3.5 integration
+│   │   │   └── geminiService.js     # Gemini integration
 │   │   └── index.js                 # Express app entry
 │   └── package.json
 │
@@ -72,7 +72,7 @@ startup-validator/
 ### Prerequisites
 - Node.js v18+
 - MongoDB Atlas account (free tier works)
-- OpenAI API key
+- Google Gemini API key
 
 ### 1. Clone & Install
 
@@ -88,7 +88,7 @@ npm run install:all
 ```env
 PORT=5000
 MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/startup-validator
-OPENAI_API_KEY=sk-your-openai-api-key
+GEMINI_API_KEY=your-gemini-api-key
 ```
 
 **Frontend** — create `client/.env`:
@@ -180,7 +180,7 @@ npx vercel --prod
 2. New Web Service on Render → connect repo
 3. Root directory: `server`
 4. Build: `npm install` · Start: `npm start`
-5. Add env vars: `MONGODB_URI`, `OPENAI_API_KEY`, `PORT=5000`
+5. Add env vars: `MONGODB_URI`, `GEMINI_API_KEY`, `PORT=5000`
 
 ---
 
@@ -188,7 +188,7 @@ npx vercel --prod
 
 | Category | Implementation |
 |---|---|
-| AI Report Quality | Structured 8-field JSON via GPT-3.5-turbo with validation + fallbacks |
+| AI Report Quality | Structured 8-field JSON via Gemini 3 Flash Preview with validation + fallbacks |
 | API Functionality | All 4 endpoints (POST, GET list, GET by ID, DELETE) |
 | Frontend UI/UX | Dark editorial design, animated, responsive, CSS Modules |
 | Database | MongoDB Atlas + Mongoose with full schema validation |
