@@ -5,7 +5,7 @@ const connectDB = require("./config/db");
 const ideaRoutes = require("./routes/ideas");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || https://startup-validator-wnec.onrender.com;
 
 // Connect to MongoDB
 connectDB();
